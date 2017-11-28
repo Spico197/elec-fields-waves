@@ -1,0 +1,327 @@
+\chapter{电磁场的基本规律}
+
+\section{电子电荷值}
+$$ e = 1.60219933 \times 10^{-19} \quad C $$
+
+\section{电荷密度}
+
+\subsection*{电荷体密度}
+$$ \rho(\vec r) = \lim\limits_{\Delta V \to 0} \frac{\Delta q(\vec{r})}{\Delta V} = \frac{\mathrm{d}q(\vec{r})}{\mathrm{d}V} \quad C/m^3$$
+反过来求电荷：
+$$ q = \int_V \rho(\vec{r}) \mathrm{d}V $$
+
+\subsection*{电荷面密度}
+$$ \rho(\vec r) = \lim\limits_{\Delta S \to 0} \frac{\Delta q(\vec{r})}{\Delta S} = \frac{\mathrm{d}q(\vec{r})}{\mathrm{d}S} \quad C/m^2$$
+$$ q = \int_S \rho_S(\vec{r}) \mathrm{d}S $$
+
+\subsection*{电荷线密度}
+$$ \rho(\vec r) = \lim\limits_{\Delta l \to 0} \frac{\Delta q(\vec{r})}{\Delta l} = \frac{\mathrm{d}q(\vec{r})}{\mathrm{d}l} \quad C/m$$
+$$ q = \int_S \rho_S(\vec{r}) \mathrm{d}l $$
+
+\subsection*{点电荷密度}
+$$ \rho(\vec{r}) = q \cdot \delta(\vec{r} - \vec{r}') $$
+其中，带“$'$”的是源点，不带的是场点。
+
+\section{电流}
+$$ i = \lim\limits_{\Delta t \to 0} \frac{\Delta q}{\Delta t} = \frac{\mathrm{d}q}{\mathrm{d}t} \quad A$$
+电流方向为正电荷流动方向。不随时间变化的电流称为恒定电流：“$I$”。
+
+\subsection*{体电流}
+电流密度矢量：
+$$ \vec{J} = \vec{e_n} \lim\limits_{\Delta S \to 0} \frac{\Delta i}{\Delta S} = \vec{e_n} \cdot \frac{\mathrm{d}i}{\mathrm{d}S} \quad A/m^2 $$
+流过任意曲面的电流：
+$$ i = \int_S\vec{J}\cdot\mathrm{d}\vec{S} $$
+
+\subsection*{面电流}
+电流密度矢量：
+$$ \vec{J_S} = \vec{e_t} \lim\limits_{\Delta l \to 0} \frac{\Delta i}{\Delta l} = \vec{e_t} \cdot \frac{\mathrm{d}i}{\mathrm{d}l} \quad A/m $$
+通过薄导体层上任意有向曲线$\vec{l}$的电流为：
+$$ i = \int \vec{J} \cdot \left(\vec{e_n} \times \mathrm{d}\vec{l}\ \right)$$
+其中，$\vec{e_n}$为平面法线方向，$\vec{e_t}$为有向曲线方向。
+
+\subsection*{线电流}
+长度元$\mathrm{d}l$；电流元：$I\mathrm{d}l$。
+
+\subsection*{电流连续性方程}
+流出闭曲面的电流等于体积$V$内单位时间所减少的电荷量。
+积分式（总电荷增加率的负值）：
+$$ I = \oint_S \vec{J} \cdot \mathrm{d}\vec{S} = -\frac{\mathrm{d}q}{\mathrm{d}t} = -\frac{\mathrm{d}}{\mathrm{d}t} \int_V \rho \mathrm{d}V $$
+微分式（电荷密度增加率）：
+$$ \nabla \cdot \vec{J} = -\frac{\partial \rho}{\partial t} $$
+恒定电流的连续性方程：
+$$ \frac{\partial \rho}{\partial t} = 0 \Rightarrow \nabla \cdot \vec{J} = 0,\quad \oint_S \vec{J} \cdot \mathrm{d}\vec{S} = 0 $$
+恒定电流是无源场，电流线是连续的闭合曲线，既无起点也无终点。
+
+\subsection*{传导电流密度}
+$$ \vec{J} = \rho\vec{v} $$
+
+\section{库仑定律(Coulomb)}
+真空中静止点电荷$q_1$对$q_2$的作用力：
+$${\vec F_{12}} = {\vec e_R}{{{q_1}{q_2}} \over {4{\rm{\pi }}{\varepsilon _0}R_{12}^2}} = {{{q_1}{q_2}{{\vec R}_{12}}} \over {4{\rm{\pi }}{\varepsilon _0}R_{12}^3}}$$
+(自由空间中)$\varepsilon_0$：真空中的介电常数，$\varepsilon_0 \approx \frac{1}{36\pi}\times10^{-19}\approx8.85\times10^{-12}\quad F/m$
+
+\section{电场强度}
+$$\vec E(\vec r) = \mathop {{\rm{lim}}}\limits_{{q_0} \to 0} {{\vec F(\vec r)} \over {{q_0}}}$$
+${q_0}$为试验电荷。真空中静止点电荷$q$激发的电场为：
+$$\vec E(\vec r) = {{q\vec R} \over {4{\rm{\pi }}{\varepsilon _0}{R^3}}} \quad(\vec R = \vec r - \vec r')$$
+
+体密度为$\rho(\vec{r})$的体分布电荷产生的电场强度：
+\begin{eqnarray*}
+	\vec E(\vec r) &=& \sum\limits_i {{{\rho ({{\vec r'}_i}){\rm{\Delta }}{{V'}_i}{{\vec R}_i}} \over {4{\rm{\pi }}{\varepsilon _0}R_i^3}}} \\
+	&=&{1 \over {4{\rm{\pi }}{\varepsilon _0}}}\int_{{\kern 1pt} V} {{\kern 1pt} {{\rho (\vec r')\vec R} \over {{R^3}}}{\rm{d}}V'}
+\end{eqnarray*}
+
+面密度为$\rho_S(\vec{r})$的面分布电荷的电场强度：
+$$\vec E(r') = {1 \over {4{\rm{\pi }}{\varepsilon _0}}}\int_{{\kern 1pt} S} {{\kern 1pt} {{{\rho _S}(\vec r')\vec R} \over {{R^3}}}{\rm{d}}S'} $$
+
+
+线密度为$\rho_l(\vec{r})$的线分布电荷的电场强度：
+$$\vec E(r') = {1 \over {4{\rm{\pi }}{\varepsilon _0}}}\int_{{\kern 1pt} C} {{\kern 1pt} {{{\rho _l}(\vec r')\vec R} \over {{R^3}}}{\rm{d}}l'} $$
+
+\section{静电场}
+\subsection*{静电场散度与高斯定理}
+静电场散度：
+
+微分形式：$$\nabla  \cdot \vec E{\rm{(}}\vec r{\rm{)}} = {{\rho {\rm{(}}\vec r{\rm{)}}} \over {{\varepsilon _0}}}$$
+
+积分形式（高斯定理）：$$\oint_{{\kern 1pt} S} {\vec E{\rm{(}}\vec r{\rm{)}} \cdot {\rm{d}}\vec S}  = {1 \over {{\varepsilon _0}}}\int_{{\kern 1pt} V} {\rho {\rm{(}}\vec r{\rm{)d}}V} $$
+
+静电场是有源场。
+
+\subsection*{静电场旋度与环路定理}
+静电场旋度：
+微分：$$\nabla  \times \vec E{\rm{(}}\vec r{\rm{)}} = 0$$
+
+积分（环路定理）：$$\oint_{{\kern 1pt} C} {\vec E{\rm{(}}\vec r{\rm{)}} \cdot {\rm{d}}\vec l}  = 0$$
+
+静电场是无旋场（保守场），电场力做功与路径无关。
+
+
+\section{安培力定律}
+真空中载流回路$C_1$对载流回路$C_2$的作用力：
+$${\vec F_{12}} = {{{\mu _0}} \over {4{\rm{\pi }}\,}}\oint_{{\kern 1pt} {C_2}} {\oint_{{\kern 1pt} {C_1}} {{{{I_2}{\rm{d}}{{\vec l}_2} \times ({I_1}{\rm{d}}{{\vec l}_1} \times {{\vec R}_{12}})} \over {R_{12}^3}}} } $$
+
+$${\vec F_{12}} = \oint_{{\kern 1pt} {C_2}} {{I_2}{\rm{d}}{{\vec l}_2} \times ({{{\mu _0}} \over {4{\rm{\pi }}}}\oint_{{\kern 1pt} {C_1}} {{{{I_1}{\rm{d}}{{\vec l}_1} \times {{\vec R}_{12}}} \over {R_{12}^3}})} }  = \oint_{{\kern 1pt} {C_2}} {{I_2}{\rm{d}}{{\vec l}_2} \times {{\vec B}_1}({{\vec r}_2})} $$
+
+其中，${\vec B_1}({\vec r_2}) = {{{\mu _0}} \over {4{\rm{\pi }}}}\oint_{{\kern 1pt} {C_1}} {{{{I_1}{\rm{d}}{{\vec l}_1} \times {{\vec R}_{12}}} \over {R_{12}^3}}} $为电流$I_1$在电流元$I_2\mathrm{d}\vec{l}_2$处产生的磁感应强度。
+
+\section{磁感应强度}
+\subsection*{任意电流回路$C$产生的磁感应强度}
+$$\vec B(\vec r) = {{{\mu _0}} \over {4{\rm{\pi }}}}\oint_{{\kern 1pt} C} {{{I{\rm{d}}\vec l' \times (\vec r - \vec r')} \over {{{\left| {\vec r - \vec r'} \right|}^3}}}}  = {{{\mu _0}} \over {4{\rm{\pi }}}}\oint_{{\kern 1pt} C} {{{I{\rm{d}}\vec l' \times \vec R} \over {{R^3}}}} $$
+电流元$I\mathrm{d}\vec{l}'$产生的磁感应强度
+
+$${\rm{d}}\vec B(\vec r) = {{{\mu _0}} \over {4{\rm{\pi }}}}{{I{\rm{d}}\vec l' \times (\vec r - \vec r')} \over {{{\left| {\vec r - \vec r'} \right|}^3}}}$$
+
+\subsection*{体电流激发的磁场}
+$$\vec B(\vec r) = {{{\mu _0}} \over {4{\rm{\pi }}}}\int_{{\kern 1pt} V} {{{J{\rm{(}}\vec r') \times \vec R} \over {{R^3}}}{\kern 1pt} } {\rm{d}}V'$$
+
+\subsection*{面电流激发的磁场}
+$$\vec B(\vec r) = {{{\mu _0}} \over {4{\rm{\pi }}}}\int_{{\kern 1pt} S} {{{{J_S}{\rm{(}}\vec r') \times \vec R} \over {{R^3}}}{\kern 1pt} } {\rm{d}}S'$$
+
+\section{恒定磁场的散度和旋度}
+恒定磁场的散度与磁通连续性原理：
+恒定场散度：$$\nabla \cdot \vec{B}(\vec{r})=0$$
+
+磁通连续性原理：$$\oint_{{\kern 1pt} S} {\vec B(\vec r) \cdot {\rm{d}}\vec S}  = 0$$
+
+恒定磁场是无源场，磁感应线是无起点和终点的闭合曲线。
+恒定磁场的旋度与安培环路定理：
+恒定磁场的旋度（微分形式）：$$\nabla \times \vec{B}(\vec{r}) = \mu_0\vec{J}(\vec{r})$$
+
+安培环路定理（积分形式）：$$\oint_C\vec{B}(\vec{r}) \cdot \mathrm{d} \vec{l}  = \mu_0\int_{S} \vec{J}(\vec r) \cdot \mathrm{d} \vec S  = \mu_0I$$
+
+恒定磁场是有旋场，是非保守场、电流是磁场的旋涡源。
+
+\section{极化强度矢量$\vec{P}\quad(C/m^2)$}
+介质极化程度：$$\vec P=\mathop {{\rm{lim}}}\limits_{\Delta V \to 0} {{\sum {{{\vec p}_i}} } \over {\Delta V}} = n\vec p=\chi_e\varepsilon_0\vec{E}$$
+
+其中，$\vec{p}=q\vec{l}$：分子平均电偶极矩；$\chi_e(>0)$：电介质的电极化率。
+面积$S$所围体积内的极化电荷$q_p$为：
+$${q_P} =  - \oint_{S} {\vec P \cdot {\rm{d}}\vec S}  =  - \int_{V} {{\kern 1pt} \nabla  \cdot \vec P{\rm{d}}V} \Rightarrow \rho_p = -\nabla\cdot\vec{P}$$
+
+电介质表面极化电荷面密度：$$\rho_{SP} = \vec P \cdot \vec e_{n}$$
+
+\section{电位移矢量}
+$$\vec{D}=\varepsilon_0\vec{E} + \vec{P}\quad(C/m^2)$$
+$$\nabla\vec{D}=\rho$$
+$$\oint\vec{D}\mathrm{d}\vec{S}=\int_V\rho\mathrm{d}V$$
+任意闭合曲面电位移矢量$D$的通量等于该曲面包含自由电荷的代数和。
+\begin{center}
+	$\left\{ 
+	\begin{aligned}
+	\nabla\vec{D}=\rho& \\ 
+	\nabla \times \vec{E}=0&
+	\end{aligned}
+	\right.$,\qquad
+	$\left\{ 
+	\begin{aligned}
+	\oint_S {\vec D \cdot {\rm{d}}\vec S}  = \int_V {\rho {\rm{d}}V} \\
+	\oint_C {\vec E{\rm{(}}\vec r{\rm{)}} \cdot {\rm{d}}\vec l}  = 0
+	\end{aligned}
+	\right.$
+\end{center}
+
+$$\vec P=\chi_e\varepsilon_0\vec{E}$$
+$$\vec D = \varepsilon_0(1 + \chi_e)\vec E = \varepsilon \vec E = \varepsilon_r\varepsilon_0\vec E$$
+有源无旋场。
+
+\section{磁化强度矢量}
+$$\vec M = \mathop {{\rm{lim}}}\limits_{\Delta V \to 0} {{\sum {{{\vec p}_{\rm{m}}}} } \over {\Delta V}} = n{\vec p_{\rm{m}}}\quad A/m$$
+
+$$\mathrm{d}I_M = n\vec{p_m} \cdot \mathrm{d} \vec{l} = \vec{M} \cdot \mathrm{d}\vec{l}$$
+
+穿过曲面$S$的磁化电流：$${I_M} = \oint_C {{\rm{d}}{I_M}}  = \oint_C {\vec M\cdot{\rm{d}}\vec l}  = \int_S {\nabla  \times \vec M\cdot{\rm{d}}\vec S} $$
+
+磁化电流体密度：$${\vec J_{\rm{M}}} = \nabla  \times \vec M$$
+
+磁化电流面密度：$${\vec J_{S{\rm{M}}}} = \vec M \times {\vec e_{\rm{n}}}$$
+
+\section{磁场强度}
+$$\vec H = {{\vec B} \over {{\mu _0}}} - \vec M$$
+即：
+$$\vec B = {\mu _0}(\vec H + \vec M)$$
+
+介质中的安培环路定理：
+$$\oint_C \vec H(\vec r) \cdot \mathrm{d}\vec l  = \int_S \vec J(\vec r) \cdot \mathrm{d}\vec S \qquad \nabla\times\vec{H}(\vec{r})=\vec{J}(\vec{r})$$
+
+磁通连续性定理：
+$$\oint_S \vec B(\vec r) \cdot \mathrm{d}\vec S = 0 \qquad \nabla \cdot \vec B(\vec r) = 0$$
+
+恒定磁场是有源无旋场，磁介质中的基本方程：
+\begin{center}
+	$\left\{ 
+	\begin{aligned}
+		&\nabla \times \vec{H}(\vec{r}) = \vec{J}(\vec{r})& \\ 
+		&\nabla \vec{B}(\vec{r}) = 0&
+	\end{aligned}
+	\right.$,\qquad
+	
+	$\left\{ 
+	\begin{aligned}
+		&\oint_C \vec{H}(\vec{r})\mathrm{d}\vec{l} = \int_S\vec{J}(\vec{r})\mathrm{d}\vec{S}&\\
+		&\oint_S \vec{B}(\vec{r})\mathrm{d}\vec{S}  = 0&
+	\end{aligned}
+	\right.$
+\end{center}
+$$\vec{M} = \chi_m\vec{H}$$
+$$\vec B = {\mu _0}(1 + {\chi _{\rm{m}}}{\rm{)}}\vec H = \mu \vec H$$
+$$ \mu = \mu_0(1+\chi_m)=\mu_0\mu_r$$
+$\chi_m$：介质的磁化率（磁化系数），$\mu$介质磁导率，$\mu_r$：介质相对磁导率。
+
+\section{欧姆定律}
+欧姆定律的微分形式，$\sigma$为煤质的电导率$(S/m)$：
+$$\vec{J}=\sigma\vec{E}$$
+
+\section{法拉第电磁感应定律}
+感应电动势：
+\begin{eqnarray*}
+	\varepsilon_{in} &=& -\frac{\mathrm{d}\Phi}{\mathrm{d}t} \\
+	&=& - \frac{\mathrm{d}}{\mathrm{d}t}\int_S \vec{B}\mathrm{d}\vec{S}
+\end{eqnarray*}
+$\Phi$：回路所围面积的磁通量
+$${\varepsilon _{in}} = \oint_C {{{\vec E}_{in}}\cdot} {\rm{ d}}\vec l$$
+$\vec{E}_{in}$：感应电场强度
+$$\oint_C\vec{E}_C\cdot\mathrm{d}\vec{l}=0 \Rightarrow \oint_C {{{\vec E}_{in}}\cdot} {\rm{d}}\vec l =  - {{\rm{d}} \over {{\rm{d}}t}}\int_S {\vec B\cdot{\rm{d}}\vec S} $$
+\begin{eqnarray*}
+	\vec{E}&=&\vec{E}_{in}+\vec{E}_C \\
+	&=&\text{感应电场}+\text{库伦电场}
+\end{eqnarray*}
+回路不变，磁场随时间变化（感生电动势）：
+$${{\rm{d}} \over {{\rm{d}}t}}\int_S {\vec B \cdot {\rm{d}}\vec S}  = \int_S {{{\partial \vec B} \over {\partial t}} \cdot {\rm{d}}\vec S} \Rightarrow \oint_C {\vec E \cdot } {\rm{d}}\vec l =  - \int_S {{{\partial \vec B} \over {\partial t}} \cdot {\rm{d}}\vec S}$$
+微分形式：
+$$\nabla  \times \vec E =  - {{\partial \vec B} \over {\partial t}}$$
+导体回路在恒定磁场中运动（动生电动势）：
+$${\varepsilon _{in}} = \oint_C {\vec E \cdot {\rm{d}}\vec l}  = \oint_C {(\vec v \times \vec B) \cdot {\rm{d}}\vec l} $$
+回路在时变磁场中运动：
+$${\varepsilon _{in}} = \oint_C {\vec E \cdot {\rm{d}}\vec l}  = \oint_C {(\vec v \times \vec B) \cdot {\rm{d}}\vec l}  - \int_S {{{\partial \vec B} \over {\partial t}}}  \cdot {\rm{d}}\vec S$$
+
+\section{全电流定理}
+微分形式：
+$$\nabla  \times \vec H = \vec J + {{\partial \vec D} \over {\partial t}}$$
+积分形式：
+$$\oint_{\,C} {\vec H \cdot {\rm{d}}\vec l = \int_{\,s} {(\vec J + {{\partial \vec D} \over {\partial t}})} }  \cdot {\rm{d}}\vec S$$
+
+\subsection*{位移电流密度}
+$${\vec J_{\rm{d}}} = {{\partial \vec D} \over {\partial {\rm{t}}}}$$
+\textbf{注：}
+在绝缘介质中，无传导电流，但有位移电流。在理想导体中，无位移电流，但有传导电流。在一般介质中，既有传导电流，又有位移电流。
+只有位移电流时：
+$$ \vec{E} = \frac{\vec{D}}{\varepsilon_0} \Leftarrow 
+\left\{
+\begin{gathered}
+	\nabla\cdot\vec{E}(\vec{r})=\frac{\vec{\rho}(\vec{r})}{\varepsilon_0} \\
+	\nabla\cdot\vec{D}=\rho
+\end{gathered}
+\right.$$
+
+\section{麦克斯韦方程组}
+积分形式：
+$$\left\{
+	\begin{aligned}
+		\oint_C\vec{H}\cdot\mathrm{d}\vec{l} = \int_S(\vec{J}+\frac{\partial \vec{D}}{\partial t})\cdot\mathrm{d}\vec{S}&\quad\text{全电流定理} \\
+		\oint_C\vec{E}\cdot\mathrm{d}\vec{l} = -\int_S\frac{\partial \vec{B}}{\partial t}\cdot\mathrm{d}\vec{S}&\quad\text{法拉第电磁感应定律} \\
+		\oint_C\vec{B}\cdot\mathrm{d}\vec{S} = 0&\quad\text{穿过任意曲面的磁感应强度的通量恒为0} \\
+		\oint_C\vec{D}\cdot\mathrm{d}\vec{S} = \int_V\rho\cdot\mathrm{d}V&\quad\text{穿过任意闭合曲面的电位移的通量等于} \\
+		&\quad\text{该闭合面所包围的自由电荷的代数和}
+	\end{aligned}
+\right.$$
+$$\oint_{S} { \vec J \cdot {\rm{d}}\vec S = }  - \int_{V} {\rho {\rm{d}}V} $$
+
+微分形式：
+$$\left\{
+\begin{aligned}
+	\nabla\times\vec{H}=\vec{J}+\frac{\partial \vec{D}}{\partial t}&\quad\text{传导电流和变化的电场都能产生磁场} \\
+	\nabla\times\vec{E} = -\frac{\partial \vec{B}}{\partial t}&\quad\text{变化的磁场产生电场} \\
+	\nabla\cdot\vec{B} = 0&\quad\text{磁场是无源场，磁感线总是闭合曲线} \\
+	\nabla\cdot\vec{D} = \rho&\quad\text{电荷产生电场} 
+\end{aligned}
+\right.$$
+
+线型媒质本构关系：
+$$\left\{
+\begin{aligned}
+	\vec{D} = \varepsilon\vec{E} \\
+	\vec{B} = \mu\vec{H} \\
+	\vec{J} = \sigma\vec{E}
+\end{aligned}
+\right.\Rightarrow\left\{
+\begin{aligned}
+	\nabla\times\vec{H}=\sigma\vec{E}+\varepsilon\frac{\partial \vec{E}}{\partial t} \\
+	\nabla\times\vec{E} = -\mu\frac{\partial \vec{H}}{\partial t} \\
+	\nabla\cdot\vec{H} = 0 \\
+	\nabla\cdot\vec{E} = \frac{\rho}{\varepsilon}
+\end{aligned}
+\right.
+$$
+\section{边界条件的一般表达式}
+前两项为切向边界条件，切向分量连续。后两项为法向边界条件，法向分量连续：
+$$\left\{
+\begin{aligned}
+	\oint_C\vec{H}\cdot\mathrm{d}\vec{l} = \int_S(\vec{J}+\frac{\partial \vec{D}}{\partial t})\cdot\mathrm{d}\vec{S} \\
+	\oint_C\vec{E}\cdot\mathrm{d}\vec{l} = -\int_S\frac{\partial \vec{B}}{\partial t}\cdot\mathrm{d}\vec{S} \\
+	\oint_C\vec{B}\cdot\mathrm{d}\vec{S} = 0 \\
+	\oint_C\vec{D}\cdot\mathrm{d}\vec{S} = \int_V\rho\cdot\mathrm{d}V 
+\end{aligned}
+\right.\Rightarrow\left\{
+\begin{aligned}
+	\vec{e}_n \times (\vec{H}_1 - \vec{H}_2) = \vec{J}_S \\
+	\vec{e}_n \times (\vec{E}_1 - \vec{E}_2) = 0 \\
+	\vec{e}_n \cdot (\vec{B}_1 - \vec{B}_2) = 0 \\
+	\vec{e}_n \cdot (\vec{D}_1 - \vec{D}_2) = \rho_S
+\end{aligned}
+\right.$$
+理想导体的$E_2$、$D_2$、$H_2$、$B_2$均为0，故有：
+$$\left\{
+\begin{aligned}
+	\vec{e}_n \times \vec{H} = \vec{J}_S&\qquad\text{理想导体表面上的电流密度等于}\vec{H}\text{的切向分量} \\
+	\vec{e}_n \times \vec{E} = 0 &\qquad\text{理想导体表面上的}\vec{E}\text{的切向分量为0}\\
+	\vec{e}_n \cdot \vec{B} = 0 &\qquad\text{理想导体表面上的}\vec{B}\text{的法向分量为0}\\
+	\vec{e}_n \cdot \vec{D} = \rho_S&\qquad\text{理想导体表面上的电荷密度等于}\vec{D}\text{的法向分量}
+\end{aligned}
+\right.$$
+
+
+
+
+
+
